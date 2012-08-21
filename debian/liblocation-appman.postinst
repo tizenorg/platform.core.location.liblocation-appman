@@ -1,0 +1,7 @@
+#!/bin/sh
+#Change file owner
+if [ ${USER} == "root" ]
+then
+	chown 0:5000 /opt/dbspace/.location-appman.db*
+	chmod 664 /opt/dbspace/.location-appman.db*
+fi

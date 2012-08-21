@@ -1,0 +1,41 @@
+liblocation-appman (0.1.0-6) unstable; urgency=low
+
+  * Change the name of homescreen. PLM defect <P120806-4426>
+  * Tag: liblocation-appman_0.1.0-6
+
+ -- Minjune Kim <sena06.kim@samsung.com>  Wed, 08 Aug 2012 14:56:52 +0900
+
+liblocation-appman (0.1.0-5) unstable; urgency=low
+
+  * Get package name from env variable.
+  * Tag: liblocation-appman_0.1.0-5
+
+ -- Minjune Kim <sena06.kim@samsung.com>  Fri, 27 Jul 2012 14:31:59 +0900
+
+liblocation-appman (0.1.0-4) unstable; urgency=low
+
+  * Support location_appman_support_test.
+  * Tag: liblocation-appman_0.1.0-4
+
+ -- Minjune Kim <sena06.kim@samsung.com>  Thu, 19 Jul 2012 17:28:02 +0900
+
+liblocation-appman (0.1.0-3) unstable; urgency=low
+
+  * Modify db's name & Extend the length of icon path. & GIT test
+  * Tag: liblocation-appman_0.1.0-3
+
+ -- Minjune Kim <sena06.kim@samsung.com>  Tue, 10 Jul 2012 21:14:26 +0900
+
+liblocation-appman (0.1.0-2) unstable; urgency=low
+
+  * support location application list in setting
+  * Tag: liblocation-appman_0.1.0-2
+
+ -- Genie Kim <daejins.kim@samsung.com>  Sat, 07 Jul 2012 19:42:45 +0900
+
+liblocation-appman (0.1.0-1) unstable; urgency=low
+
+  * Initial Upload
+  * Tag: liblocation-appman_0.1.0-1
+
+ -- Hyuncheol JUng <hyuncheol.jung@samsung.com>  Tue, 14 May 2012 16:51:02 +0900

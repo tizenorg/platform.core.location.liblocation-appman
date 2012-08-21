@@ -1,0 +1,24 @@
+Source: liblocation-appman
+Section: libs
+Priority: extra
+Maintainer: Youngae Kang <youngae.kang@samsung.com>, Hyuncheol Jung <hyuncheol.jung@samsung.com>, Minjune Kim <sena06.kim@samsung.com>, Genie Kim <daejins.kim@samsung.com>
+Build-Depends: debhelper (>= 5),  libglib2.0-dev, libgcrypt11-dev,  dlog-dev, libsqlite3-dev, libxml2-dev, capi-appfw-app-manager-dev
+
+Package: liblocation-appman
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},libglib2.0-0, libsqlite3-0
+Description: Location DB Manager library
+
+Package: liblocation-appman-dev
+Section: libdevel
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, liblocation-appman (= ${Source-Version})
+Description: Location DB Manager library(DEV)
+
+Package: liblocation-appman-dbg
+Section: debug
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, liblocation-appman (= ${Source-Version})
+Description: Location DB Manager library(DBG)
+
