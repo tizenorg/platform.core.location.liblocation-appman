@@ -1,7 +1,7 @@
 %define _optdir /opt
 Name:       liblocation-appman
 Summary:    Location DB controler
-Version:    0.1.0
+Version:    0.1.1
 Release:    1
 Group:      System/Libraries
 License:    TBD

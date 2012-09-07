@@ -1,3 +1,10 @@
+liblocation-appman (0.1.1-1) unstable; urgency=low
+
+  * remove HomeScreen in DB
+  * Tag: liblocation-appman_0.1.1-1
+
+ -- root <sena06.kim@samsung.com>  Fri, 07 Sep 2012 21:42:27 +0900
+
 liblocation-appman (0.1.0-6) unstable; urgency=low
 
   * Change the name of homescreen. PLM defect <P120806-4426>

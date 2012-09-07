@@ -10,6 +10,5 @@ CREATE TABLE LocationApp(
 	enable		BOOL
 	);
 
-INSERT INTO "LocationApp" (package, app_id, installed_date, recently_used, enable) VALUES ("HomeScreen", 0, 0, 0, 0);
-INSERT INTO "LocationApp" (package, app_id, installed_date, recently_used, enable) VALUES ("com.samsung.setting", 0, 0, 0, 1);
+INSERT INTO "LocationApp" (package, app_id, installed_date, recently_used, enable) VALUES ("org.tizen.setting", 0, 0, 0, 1);
 
