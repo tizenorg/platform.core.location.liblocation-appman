@@ -34,7 +34,7 @@ Description : Location DB controller Development Package
 
 
 %build
-cmake . -DCMAKE_INSTALL_PREFIX=/usr
+%cmake .
 
 # Call make instruction with smp support
 make %{?jobs:-j%jobs}
@@ -44,7 +44,7 @@ make %{?jobs:-j%jobs}
 
 chown 0:5000 /opt/dbspace/.location-appman.db*
 chmod 664 /opt/dbspace/.location-appman.db*
-if [ -f /usr/lib/rpm-plugins/msm.so ]
+if [ -f %{_libdir}/rpm-plugins/msm.so ]
 then
 chsmack -a 'location_fw::db' /opt/dbspace/.location-appman.db*
 fi
