@@ -6,6 +6,7 @@ Release:    1
 Group:      System/Libraries
 License:    TBD
 Source0:    %{name}-%{version}.tar.gz
+Source1001: 	liblocation-appman.manifest
 
 Requires(post): sqlite
 BuildRequires:  cmake
@@ -31,6 +32,7 @@ Description : Location DB controller Development Package
 
 %prep
 %setup -q -n %{name}-%{version}
+cp %{SOURCE1001} .
 
 
 %build
@@ -60,11 +62,12 @@ rm -rf %{buildroot}
 rm -rf %{buildroot}
 
 %files
-%manifest liblocation-appman.manifest
+%manifest %{name}.manifest
 %defattr(-,root,root,-)
 %{_libdir}/liblocation-appman.so*
 %{_optdir}/dbspace/.location-appman.db*
 
 %files devel
+%manifest %{name}.manifest
 %{_includedir}/location-appman/*.h
 %{_libdir}/pkgconfig/*.pc
