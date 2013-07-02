@@ -46,10 +46,10 @@ make %{?jobs:-j%jobs}
 
 chown 0:5000 /opt/dbspace/.location-appman.db*
 chmod 664 /opt/dbspace/.location-appman.db*
-if [ -f %{_libdir}/rpm-plugins/msm.so ]
-then
+#if [ -f %{_libdir}/rpm-plugins/msm.so ]
+#then
 #chsmack -a 'location_fw::db' /opt/dbspace/.location-appman.db*
-fi
+#fi
 
 %postun -p /sbin/ldconfig
 
