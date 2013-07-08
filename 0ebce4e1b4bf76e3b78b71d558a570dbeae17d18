@@ -1,0 +1,8 @@
+Change-Id: Ie83bcb5189c4fb59e0da1b2a4551635656a6f243
+Code-Review+2: Ryan Ware <ware@linux.intel.com>
+Verified+1: Ryan Ware <ware@linux.intel.com>
+Submitted-by: Ryan Ware <ware@linux.intel.com>
+Submitted-at: Mon, 08 Jul 2013 10:13:40 -0700
+Reviewed-on: https://review.tizen.org/gerrit/4425
+Project: platform/core/location/liblocation-appman
+Branch: refs/heads/tizen
