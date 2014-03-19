@@ -2,11 +2,11 @@
 Name:       liblocation-appman
 Summary:    Location DB controler
 Version:    0.1.6
-Release:    1
+Release:    0
 Group:      System/Libraries
-License:    TBD
+License:    Apache-2.0
 Source0:    %{name}-%{version}.tar.gz
-Source1001: 	liblocation-appman.manifest
+Source1001: liblocation-appman.manifest
 
 Requires(post): sqlite
 BuildRequires:  cmake
@@ -15,6 +15,7 @@ BuildRequires:  pkgconfig(dlog)
 BuildRequires:  pkgconfig(sqlite3)
 BuildRequires:  pkgconfig(libxml-2.0)
 BuildRequires:  pkgconfig(capi-appfw-app-manager)
+BuildRequires:  libtzplatform-config-devel
 BuildRequires:  libgcrypt-devel
 
 %description
@@ -36,7 +37,7 @@ cp %{SOURCE1001} .
 
 
 %build
-%cmake .
+%cmake . -DTZ_SYS_DB=%{TZ_SYS_DB}
 
 # Call make instruction with smp support
 make %{?jobs:-j%jobs}
@@ -44,8 +45,8 @@ make %{?jobs:-j%jobs}
 %post
 /sbin/ldconfig
 
-chown 0:5000 /opt/dbspace/.location-appman.db*
-chmod 664 /opt/dbspace/.location-appman.db*
+chown root:%{TZ_SYS_USER_GROUP} %{TZ_SYS_DB}/.location-appman.db*
+chmod 664 %{TZ_SYS_DB}/.location-appman.db*
 %postun -p /sbin/ldconfig
 
 %install
@@ -60,7 +61,7 @@ rm -rf %{buildroot}
 %manifest %{name}.manifest
 %defattr(-,root,root,-)
 %{_libdir}/liblocation-appman.so*
-%{_optdir}/dbspace/.location-appman.db*
+%{TZ_SYS_DB}/.location-appman.db*
 
 %files devel
 %manifest %{name}.manifest
