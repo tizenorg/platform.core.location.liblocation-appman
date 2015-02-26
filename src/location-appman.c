@@ -883,7 +883,7 @@ int location_appman_get_package_by_pid(pid_t pid, location_appman_s ** appman)
 	char *package = NULL;
 	int ret = 0;
 
-	ret = app_manager_get_package(pid, &package);
+	ret = app_manager_get_app_id(pid, &package);
 	if (ret != APP_MANAGER_ERROR_NONE) {
 		const char *pkg_name = g_getenv(LOCATION_APPMAN_PKG_NAME);
 		if (!pkg_name) {
